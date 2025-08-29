@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Book Tracker</title>
+
+</head>
+<body>
+  <div class="widget">
+    <h1>Book Tracker</h1>
+
+    <label for="title">Title</label>
+    <input type="text" id="title" placeholder="e.g. The Bell Jar" />
+
+    <label for="author">Author</label>
+    <input type="text" id="author" placeholder="e.g. Sylvia Plath" />
+
+    <label for="progress">Progress</label>
+    <input type="text" id="progress" placeholder="e.g. Page 87 of 234" />
+
+    <div class="button-group">
+      <button onclick="saveBook()">Save</button>
+      <button onclick="toggleEdit()">Edit Mode</button>
+      <button onclick="clearInputs()">Clear Fields</button>
+    </div>
+
+    <div class="book-list" id="bookList"></div>
+  </div>
+
+</body>
+</html>
+
