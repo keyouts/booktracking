@@ -4,30 +4,52 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Book Tracker</title>
-      <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-  <div class="widget">
-    <h1>Book Tracker</h1>
+  <div class="widget" role="region" aria-labelledby="bookTrackerHeading">
+    <h1 id="bookTrackerHeading">Book Tracker</h1>
 
     <label for="title">Title</label>
-    <input type="text" id="title" placeholder="e.g. The Bell Jar" />
+    <input 
+      type="text" 
+      id="title" 
+      placeholder="e.g. The Bell Jar" 
+      aria-label="Enter book title"
+    />
 
     <label for="author">Author</label>
-    <input type="text" id="author" placeholder="e.g. Sylvia Plath" />
+    <input 
+      type="text" 
+      id="author" 
+      placeholder="e.g. Sylvia Plath" 
+      aria-label="Enter author's name"
+    />
 
     <label for="progress">Progress</label>
-    <input type="text" id="progress" placeholder="e.g. Page 87 of 234" />
+    <input 
+      type="text" 
+      id="progress" 
+      placeholder="e.g. Page 87 of 234" 
+      aria-label="Enter reading progress"
+    />
 
-    <div class="button-group">
-      <button onclick="saveBook()">Save</button>
-      <button onclick="toggleEdit()">Edit Mode</button>
-      <button onclick="clearInputs()">Clear Fields</button>
+    <div class="button-group" role="group" aria-label="Book tracker controls">
+      <button onclick="saveBook()" aria-label="Save book entry">Save</button>
+      <button onclick="toggleEdit()" aria-label="Toggle edit mode">Edit Mode</button>
+      <button onclick="clearInputs()" aria-label="Clear all input fields">Clear Fields</button>
     </div>
 
-    <div class="book-list" id="bookList"></div>
+    <div 
+      class="book-list" 
+      id="bookList" 
+      role="list" 
+      aria-label="List of tracked books"
+    ></div>
   </div>
-<script src="./script.js"></script>
+
+  <script src="./script.js"></script>
 </body>
 </html>
+
 
